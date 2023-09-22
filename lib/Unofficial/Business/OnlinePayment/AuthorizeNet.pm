@@ -1,14 +1,14 @@
-package Business::OnlinePayment::AuthorizeNet;
+package Unofficial::Business::OnlinePayment::AuthorizeNet;
 
 use strict;
 use Carp;
-use Business::OnlinePayment;
+use Unofficial::Business::OnlinePayment;
 use LWP::UserAgent;
 use vars qw($VERSION @ISA $me);
 
-@ISA = qw(Business::OnlinePayment);
-$VERSION = '3.23';
-$me = 'Business::OnlinePayment::AuthorizeNet';
+@ISA = qw(Unofficial::Business::OnlinePayment);
+$VERSION = '3.24';
+$me = 'Unofficial::Business::OnlinePayment::AuthorizeNet';
 
 sub set_defaults {
     my $self = shift;

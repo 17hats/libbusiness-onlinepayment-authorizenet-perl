@@ -1,13 +1,13 @@
-package Business::OnlinePayment::AuthorizeNet::AIM;
+package Unofficial::Business::OnlinePayment::AuthorizeNet::AIM;
 
 use strict;
 use Carp;
-use Business::OnlinePayment::AuthorizeNet;
-use Business::OnlinePayment::AuthorizeNet::AIM::ErrorCodes '%ERRORS';
+use Unofficial::Business::OnlinePayment::AuthorizeNet;
+use Unofficial::Business::OnlinePayment::AuthorizeNet::AIM::ErrorCodes '%ERRORS';
 use Text::CSV_XS;
 use vars qw($VERSION @ISA @EXPORT @EXPORT_OK);
 
-@ISA = qw(Business::OnlinePayment::AuthorizeNet);
+@ISA = qw(Unofficial::Business::OnlinePayment::AuthorizeNet);
 $VERSION = '3.23';
 
 sub set_defaults {

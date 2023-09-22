@@ -1,17 +1,17 @@
-package Business::OnlinePayment::AuthorizeNet::ARB;
+package Unofficial::Business::OnlinePayment::AuthorizeNet::ARB;
 
 use strict;
 use Carp;
-use Business::OnlinePayment::AuthorizeNet;
+use Unofficial::Business::OnlinePayment::AuthorizeNet;
 use XML::Simple;
 use XML::Writer;
 use Tie::IxHash;
 use vars qw($VERSION $DEBUG @ISA $me);
 
-@ISA = qw(Business::OnlinePayment::AuthorizeNet);
+@ISA = qw(Unofficial::Business::OnlinePayment::AuthorizeNet);
 $VERSION = '0.02';
 $DEBUG = 0;
-$me='Business::OnlinePayment::AuthorizeNet::ARB';
+$me='Unofficial::Business::OnlinePayment::AuthorizeNet::ARB';
 
 sub set_defaults {
     my $self = shift;

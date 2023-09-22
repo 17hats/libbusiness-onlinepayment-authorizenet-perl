@@ -1,4 +1,4 @@
-package Business::OnlinePayment;
+package Unofficial::Business::OnlinePayment;
 
 use strict;
 use vars qw($VERSION %_info_handler);
@@ -44,7 +44,7 @@ __PACKAGE__->build_subs(@methods);
 #fallback
 sub _info {
   my $class = shift;
-  ( my $gw = $class ) =~ s/^Business::OnlinePayment:://;
+  ( my $gw = $class ) =~ s/^Unofficial::Business::OnlinePayment:://;
   {
     'info_compat'    => '0.00',
     'gateway_name'   => $gw,
@@ -144,7 +144,7 @@ sub _risk_detect {
     return 0;
 }
 
-my @Fraud_Class_Path = qw(Business::OnlinePayment Business::FraudDetect);
+my @Fraud_Class_Path = qw(Unofficial::Business::OnlinePayment Unofficial::Business::FraudDetect);
 
 sub _pre_submit {
     my ($self) = @_;

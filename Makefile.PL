@@ -1,6 +1,6 @@
 use ExtUtils::MakeMaker;
 WriteMakefile(
-    'NAME'         => 'Business::OnlinePayment::AuthorizeNet',
+    'NAME'         => 'Unofficial::Business::OnlinePayment::AuthorizeNet',
     'VERSION_FROM' => 'AuthorizeNet.pm', # finds $VERSION
     'AUTHOR'       => 'Ivan Kohler <ivan-authorizenet@420.am>', #really just
                                                                 #the maintainer

@@ -2,4 +2,4 @@
 
 use Test::More tests => 1;
 
-use_ok 'Business::OnlinePayment';
+use_ok 'Unofficial::Business::OnlinePayment';

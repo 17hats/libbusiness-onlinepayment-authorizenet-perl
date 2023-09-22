@@ -11,8 +11,8 @@ my($arblogin, $arbpassword) = test_account_or_skip('arb');
 my($aimlogin, $aimpassword) = test_account_or_skip();
 plan tests => 9;
   
-use_ok 'Business::OnlinePayment';
-my $tx = Business::OnlinePayment->new("AuthorizeNet", 
+use_ok 'Unofficial::Business::OnlinePayment';
+my $tx = Unofficial::Business::OnlinePayment->new("AuthorizeNet", 
                                       fraud_detect => '_Fake',
                                       fraud_detect_faked_result => '0',
                                       fraud_detect_faked_score => '2',

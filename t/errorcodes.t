@@ -6,9 +6,9 @@ require "t/lib/test_account.pl";
 my($login, $password) = test_account_or_skip();
 plan tests => 3;
   
-use_ok 'Business::OnlinePayment';
+use_ok 'Unofficial::Business::OnlinePayment';
 
-my $tx = Business::OnlinePayment->new("AuthorizeNet");
+my $tx = Unofficial::Business::OnlinePayment->new("AuthorizeNet");
 $tx->server('test.authorize.net');
 $tx->content(
     type           => 'VISA',

@@ -6,12 +6,12 @@ require "t/lib/test_account.pl";
 my($login, $password) = test_account_or_skip();
 plan tests => 4;
 
-use_ok 'Business::OnlinePayment';
+use_ok 'Unofficial::Business::OnlinePayment';
 
 #avoid dup checking in case "make test" is run too close to the last
 my $amount = sprintf('%.2f', rand(100));
 
-my $tx = Business::OnlinePayment->new("AuthorizeNet");
+my $tx = Unofficial::Business::OnlinePayment->new("AuthorizeNet");
 $tx->server('test.authorize.net');
 $tx->content(
     type           => 'VISA',
@@ -49,7 +49,7 @@ like $order_number, qr/^\d+$/;
 #warn "auth: $auth\n";
 #warn "order_number: $order_number\n";
 
-my $settle_tx = Business::OnlinePayment->new("AuthorizeNet");
+my $settle_tx = Unofficial::Business::OnlinePayment->new("AuthorizeNet");
 $settle_tx->server('test.authorize.net');
 $settle_tx->content(
     type           => 'VISA',

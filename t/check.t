@@ -6,9 +6,9 @@ require "t/lib/test_account.pl";
 my($login, $password) = test_account_or_skip('ach');
 plan tests => 2;
 
-use_ok 'Business::OnlinePayment';
+use_ok 'Unofficial::Business::OnlinePayment';
 
-my $ctx = Business::OnlinePayment->new("AuthorizeNet");
+my $ctx = Unofficial::Business::OnlinePayment->new("AuthorizeNet");
 $ctx->server('test.authorize.net');
 $ctx->content(
     type           => 'CHECK',

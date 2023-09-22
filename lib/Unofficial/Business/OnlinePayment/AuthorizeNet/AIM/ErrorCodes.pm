@@ -1,4 +1,4 @@
-package Business::OnlinePayment::AuthorizeNet::AIM::ErrorCodes;
+package Unofficial::Business::OnlinePayment::AuthorizeNet::AIM::ErrorCodes;
 
 use strict;
 use warnings;

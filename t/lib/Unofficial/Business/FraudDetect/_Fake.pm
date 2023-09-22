@@ -1,8 +1,8 @@
-package Business::FraudDetect::_Fake;
+package Unofficial::Business::FraudDetect::_Fake;
 
 use vars qw( @ISA $result $fraud_score );
 
-@ISA = qw ( Business::OnlinePayment );
+@ISA = qw ( Unofficial::Business::OnlinePayment );
 
 sub _glean_parameters_from_parent {
   my ($self, $parent) = @_;

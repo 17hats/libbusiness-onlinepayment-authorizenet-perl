@@ -1,5 +1,9 @@
 Revision history for Perl extension Business::OnlinePayment::AuthorizeNet.
 
+3.24  2023-09-22  Rhesa Rozendaal <rhesa@cpan.org>
+        - switch to LWP::UserAgent
+        - include the base class
+
 3.23  Sun Dec 20 13:05:34 PST 2015
         - Don't require libense_num / license_state / license_dob for E-Check
           transacitons; not a universal requirement.  Patches from Craig
