@@ -4,7 +4,6 @@ use strict;
 use Carp;
 use Business::OnlinePayment::AuthorizeNet;
 use Business::OnlinePayment::AuthorizeNet::AIM::ErrorCodes '%ERRORS';
-use LWP::UserAgent;
 use Text::CSV_XS;
 use vars qw($VERSION @ISA @EXPORT @EXPORT_OK);
 
@@ -82,23 +81,6 @@ sub get_fields {
     my %new = ();
     foreach( grep defined $content{$_}, @fields) { $new{$_} = $content{$_}; }
     return %new;
-}
-
-sub https_post {
-    my $self = shift;
-    my ($opt, $postdata) = @_;
-    my $url = "https://" . $self->server . $self->path;
-
-    my $ua = LWP::UserAgent->new;
-    my $resp = $ua->post($url, $opt->{headers}->%*, Content => $postdata);
-    my $res_page = $resp->decoded_content;
-    my $res_code = $resp->status_line;
-    my @res_headers = $resp->headers->flatten;
-    $self->response_page( $res_page );
-    $self->response_code( $res_code );
-    $self->response_headers( { @res_headers } );
-
-    return ( $res_page, $res_code, @res_headers );
 }
 
 sub submit {

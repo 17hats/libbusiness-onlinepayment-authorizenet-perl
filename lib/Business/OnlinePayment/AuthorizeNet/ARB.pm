@@ -3,13 +3,12 @@ package Business::OnlinePayment::AuthorizeNet::ARB;
 use strict;
 use Carp;
 use Business::OnlinePayment::AuthorizeNet;
-use Business::OnlinePayment::HTTPS;
 use XML::Simple;
 use XML::Writer;
 use Tie::IxHash;
 use vars qw($VERSION $DEBUG @ISA $me);
 
-@ISA = qw(Business::OnlinePayment::AuthorizeNet Business::OnlinePayment::HTTPS);
+@ISA = qw(Business::OnlinePayment::AuthorizeNet);
 $VERSION = '0.02';
 $DEBUG = 0;
 $me='Business::OnlinePayment::AuthorizeNet::ARB';
@@ -23,6 +22,7 @@ sub set_defaults {
 
     $self->build_subs(qw( order_number md5 avs_code cvv2_response
                           cavv_response
+                          response_page response_code response_headers
                      ));
 }
 
