@@ -1,7 +1,8 @@
-AuthorizeNet/AIM.pm
-AuthorizeNet/AIM/ErrorCodes.pm
-AuthorizeNet/ARB.pm
-AuthorizeNet.pm
+lib/Unofficial/Business/OnlinePayment/AuthorizeNet/AIM.pm
+lib/Unofficial/Business/OnlinePayment/AuthorizeNet/AIM/ErrorCodes.pm
+lib/Unofficial/Business/OnlinePayment/AuthorizeNet/ARB.pm
+lib/Unofficial/Business/OnlinePayment/AuthorizeNet.pm
+lib/Unofficial/Business/OnlinePayment.pm
 Changes
 MANIFEST
 Makefile.PL
@@ -19,6 +20,6 @@ t/test_account
 t/test_account_ach
 t/test_account_arb
 t/lib/test_account.pl
-t/lib/Business/FraudDetect/_Fake.pm
+t/lib/Unofficial/Business/FraudDetect/_Fake.pm
 META.yml                                 Module meta-data (added by MakeMaker)
 META.json                                Module JSON meta-data (added by MakeMaker)
