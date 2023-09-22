@@ -6,8 +6,7 @@ WriteMakefile(
                                                                 #the maintainer
     'PREREQ_PM'    => { 'Text::CSV_XS' => 0,
                         'Business::OnlinePayment' => 3,
-                        'Business::OnlinePayment::HTTPS' => 0,
-                        'Net::HTTPS::Any' => 0,
+                        'LWP::UserAgent' => 6.50,
 			'Test::More' => 0.42,
                         'Tie::IxHash' => 0,
                         'XML::Simple' => 0,
