@@ -24,7 +24,7 @@ $tx->content(
     password       => $arbpassword,
     action         => 'Recurring Authorization',
     description    => 'Business::OnlinePayment::ARB mixed test',
-    amount         => '1.05',
+    amount         => '1.05' + int(rand()*10) / 10,
     first_name     => 'Tofu',
     last_name      => 'Beast',
     card_number    => '4007000000027',
