@@ -32,7 +32,6 @@
       },
       "runtime" : {
          "requires" : {
-            "Business::OnlinePayment" : "3",
             "LWP::UserAgent" : "6.50",
             "Test::More" : "0.42",
             "Text::CSV_XS" : "0",

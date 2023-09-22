@@ -5,7 +5,6 @@ WriteMakefile(
     'AUTHOR'       => 'Ivan Kohler <ivan-authorizenet@420.am>', #really just
                                                                 #the maintainer
     'PREREQ_PM'    => { 'Text::CSV_XS' => 0,
-                        'Business::OnlinePayment' => 3,
                         'LWP::UserAgent' => 6.50,
 			'Test::More' => 0.42,
                         'Tie::IxHash' => 0,
